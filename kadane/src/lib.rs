@@ -13,9 +13,11 @@ mod tests {
     }
 }
 
+/// When your sum from the begining is less than 0 it means you have mostly negative until now, which means you can simply reset
+/// because everything before the the point of negative will simply be denied from the negative sums we have here
 pub fn kadane(vec : &Vec<i32>) -> i32{
     let min =  0;
-    let mut best_sum = min;
+    let mut best_sum = std::i32::MIN; // Min value to allow for a negative sum
     let mut current = min;
 
     println!("Starting iteration");
@@ -41,7 +43,7 @@ pub fn kadane_with_range(vec : &Vec<i32>) -> (i32,usize,usize){
     // Simply a copy paste from the original one with a few lines added
 
     let min =  0;
-    let mut best_sum = min;
+    let mut best_sum = std::i32::MIN; // Min value to allow for a negative sum
     let mut current = min;
     // added 2 variables
     let mut start : usize = 0;
@@ -56,7 +58,7 @@ pub fn kadane_with_range(vec : &Vec<i32>) -> (i32,usize,usize){
         
 
         if current <= min{
-            start = t; // reset the start
+            start = t; // reset the start when the sum is 0 or less
             current = i;
         }
         else{
