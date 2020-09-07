@@ -7,6 +7,5 @@ Each folder is a standalone cargo project.
 
 Algorithms Todo:
  - Binary search
- - Kadane's Algorithm
  - Longest Increasing Subsequence Problem
  
