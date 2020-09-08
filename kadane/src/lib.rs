@@ -7,7 +7,7 @@ mod tests {
         assert_eq!(16, kadane(&vec));
     }
     #[test]
-    fn range_test(){
+     fn range_test(){
         let vec = vec![2,-3,5,10,-8,9,-9];
         assert_eq!((16,2,6),kadane_with_range(&vec));
     }
@@ -48,18 +48,17 @@ pub fn kadane_with_range(vec : &Vec<i32>) -> (i32,usize,usize){
     // added 2 variables
     let mut start : usize = 0;
     let mut end : usize = 0;
-
+    
 
     println!("Starting iteration");
-    for t in 0..vec.len(){ // Changed to have iter number instead of just values
+    for (t,i) in vec.iter().enumerate(){ // Changed to have iter number instead of just values
         // Uncomment for better view(maybe add some more println!)
         // println!("Iteration {} current {} best {}",i,current,best_sum);
-        let i = vec[t];
         
 
         if current <= min{
             start = t; // reset the start when the sum is 0 or less
-            current = i;
+            current = *i;
         }
         else{
             current += i;
@@ -71,5 +70,6 @@ pub fn kadane_with_range(vec : &Vec<i32>) -> (i32,usize,usize){
         }
     }
     
+
     (best_sum,start,end)
 }
