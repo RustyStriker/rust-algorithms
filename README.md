@@ -6,6 +6,5 @@ Just note that the implementations are not optimized(or at least doesnt try to b
 Each folder is a standalone cargo project.
 
 Algorithms Todo:
- - Binary search
  - Longest Increasing Subsequence Problem
  
