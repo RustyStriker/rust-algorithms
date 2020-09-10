@@ -12,6 +12,8 @@ mod tests {
     }
 }
 
+/// Basically using modulos( % ) to represent a as "a = bx + y"
+/// We can dictate from here that a's greatest common divisor is also b and y's gcd 
 pub fn gcd(a : i32, b : i32) -> i32{
     if a == 0 {
         return b;
