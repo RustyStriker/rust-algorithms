@@ -7,4 +7,9 @@ Each folder is a standalone cargo project.
 
 Algorithms Todo:
  - Longest Increasing Subsequence Problem
+
+
+Image recognition and camera feeds:
+ - Get camera feed into rust(rscam) / Read a photo
+ - actually learn computer vision
  
